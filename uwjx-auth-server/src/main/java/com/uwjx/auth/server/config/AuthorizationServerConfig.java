@@ -21,7 +21,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .secret("secret-01")
                 .scopes("scopes-01")
                 .authorizedGrantTypes("authorization_code")
-                .redirectUris("http://redirect-uris");
+                .redirectUris("http://localhost:8090/codeHandler");
     }
 
     @Override

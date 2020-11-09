@@ -41,6 +41,17 @@
                 <artifactId>spring-security-oauth2</artifactId>
                 <version>2.3.3.RELEASE</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>3.14.7</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.73</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -48,6 +59,8 @@
 
     <modules>
         <module>uwjx-auth-server</module>
+        <module>uwjx-components</module>
+        <module>uwjx-testing</module>
     </modules>
 
     <build>
