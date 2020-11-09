@@ -29,6 +29,6 @@ public class SsoController {
         String url = "http://localhost:8080/oauth/token?client_id=client-01&grant_type=authorization_code&code="+code+"&redirect_uri=http://localhost:8090/codeHandler";
         String resp = httpRequest.post(url , "client-01" , "secret-01");
         log.warn("code 处理结果:{}" , resp);
-        return code;
+        return resp;
     }
 }

@@ -20,6 +20,8 @@
 
 	<modules>
 		<module>uwjx-auth-server-testing</module>
+		<module>uwjx-auth-server-client-01</module>
+		<module>uwjx-auth-server-client-02</module>
 	</modules>
 
 	<dependencies>

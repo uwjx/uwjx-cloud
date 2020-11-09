@@ -21,7 +21,13 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .secret("secret-01")
                 .scopes("scopes-01")
                 .authorizedGrantTypes("authorization_code")
-                .redirectUris("http://localhost:8090/codeHandler");
+                .redirectUris("http://localhost:8091/client-01/codeHandler")
+                .and()
+                .withClient("client-02")
+                .secret("secret-02")
+                .scopes("scopes-02")
+                .authorizedGrantTypes("authorization_code")
+                .redirectUris("http://localhost:8092/client-02/codeHandler");
     }
 
     @Override
@@ -31,6 +37,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        super.configure(security);
+        security.checkTokenAccess("permitAll()");
     }
 }
