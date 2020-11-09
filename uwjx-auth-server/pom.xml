@@ -30,6 +30,11 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.uwjx</groupId>
+			<artifactId>uwjx-components-commons</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
