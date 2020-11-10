@@ -28,10 +28,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .scopes("scopes-01")
                 .authorizedGrantTypes("authorization_code" , "client_credentials", "password", "refresh_token")
                 .redirectUris("http://localhost:8091/client-01/codeHandler")
+                .autoApprove(true)
                 .and()
                 .withClient("client-02")
                 .secret("secret-02")
                 .scopes("scopes-02")
+                .autoApprove(true)
                 .authorizedGrantTypes("authorization_code" , "client_credentials", "password", "refresh_token")
                 .redirectUris("http://localhost:8092/client-02/codeHandler");
     }
@@ -44,5 +46,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         security.checkTokenAccess("permitAll()");
+
     }
 }
